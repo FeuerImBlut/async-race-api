@@ -94,6 +94,6 @@ server.patch('/engine', (req, res) => {
 });
 
 server.use(router);
-server.listen(PORT, () => {
+server.listen(process.env.PORT || PORT || 3000, () => {
     console.log('Server is running on port', PORT);
 });
